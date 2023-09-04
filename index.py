@@ -29,7 +29,5 @@ for transaction in plist['transactions']:
             details.append(f"{transaction['name']}")
         if 'bookingText' in transaction:
             details.append(f"{transaction['bookingText']}")
-
-
         if details:
             print(', '.join(details))
