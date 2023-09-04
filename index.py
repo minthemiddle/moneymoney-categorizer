@@ -23,6 +23,7 @@ except plistlib.InvalidFileException as exception:
 for transaction in plist['transactions']:
     if transaction['booked']:
         details = []
+        details.append(f'ID: {transaction["id"]}')
         if 'amount' in transaction:
             details.append(f"Amount: {transaction['amount']}")
         if 'name' in transaction:
